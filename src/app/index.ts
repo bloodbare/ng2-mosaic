@@ -1,2 +1,1 @@
-export * from './environment';
-export * from './app.component';
+export {MosaicModule} from './mosaic.module';
