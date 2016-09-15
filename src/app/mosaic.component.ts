@@ -15,9 +15,9 @@ import {
 } from '@angular/core';
 
 import { TILES } from './tiles';
-import {LayoutService} from './services/layout.service';
-
-import {OpaqueToken} from '@angular/core';
+import { LayoutService } from './services/layout.service';
+import { SelfDirective } from './directives/self.directive';
+import { OpaqueToken } from '@angular/core';
 
 /**
  * @internal
@@ -111,6 +111,7 @@ export class MosaicEditorComponent {
       const declarations = this.moduleMeta.declarations || [];
       declarations.push(componentType);
       declarations.push(TILES);
+      declarations.push(SelfDirective);
       const moduleMeta: NgModuleMetadataType = {
         imports: this.moduleMeta.imports,
         providers: this.moduleMeta.providers,

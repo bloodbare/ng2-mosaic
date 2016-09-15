@@ -8,7 +8,6 @@ import { CommonModule } from '@angular/common';
 
 import { TILES } from './tiles';
 import { HtmlTileComponent } from './tiles/html.component';
-import { DragulaModule } from 'ng2-dragula';
 import { MosaicEditorComponent } from './mosaic.component';
 
 import { ObjectService } from './services/object.service';
@@ -44,14 +43,13 @@ type StoreType = {
   imports: [
     BrowserModule,
     FormsModule,
-    DragulaModule,
     CommonModule
   ],
   providers: [
     APP_PROVIDERS,
     ENV_PROVIDERS,
     provideComponentOutletModule({
-      imports: [MosaicModule, DragulaModule]
+      imports: [MosaicModule]
     })
   ],
   bootstrap: [MosaicEditorComponent]
